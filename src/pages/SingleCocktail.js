@@ -80,10 +80,15 @@ export default function SingleCocktail() {
             <p>info : {info}</p>
             <p>glass : {glass}</p>
             <p>instructions : {instructions}</p>
+            <p>
+              ingredients :{" "}
+              {ingredients.map((item, id) => {
+                return item ? <span key={id}>{item}</span> : null;
+              })}
+            </p>
           </div>
         </div>
       </section>
     );
   }
-  return <h1>single cocktail page{id}</h1>;
 }
